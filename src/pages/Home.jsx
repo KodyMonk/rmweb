@@ -1,6 +1,7 @@
 import { ArrowRight, Building2, ConciergeBell, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import PortfolioLogos from "../components/PortfolioLogos";
 
 export default function Home() {
   return (
@@ -86,6 +87,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <PortfolioLogos showButton={true} />
 
       <section className="aboutPreview">
         <div className="aboutText">

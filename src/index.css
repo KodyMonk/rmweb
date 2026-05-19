@@ -685,86 +685,34 @@ a {
 
 /* PORTFOLIO PAGE */
 
-.portfolioPage {
-  min-height: 100vh;
+.portfolioLogoSection {
+  position: relative;
+  padding: 90px 6% 95px;
+  text-align: center;
   background:
     radial-gradient(circle at top center, rgba(215, 170, 99, 0.07), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(215, 170, 99, 0.09), transparent 18%),
-    radial-gradient(circle at bottom right, rgba(215, 170, 99, 0.09), transparent 18%),
+    radial-gradient(circle at bottom left, rgba(215, 170, 99, 0.08), transparent 18%),
     #08090a;
-  color: var(--white);
-  overflow: hidden;
+  border-top: 1px solid rgba(215, 170, 99, 0.18);
+  border-bottom: 1px solid rgba(215, 170, 99, 0.18);
 }
 
-.portfolioHero {
-  position: relative;
-  padding: 160px 6% 90px;
-  text-align: center;
+.portfolioPage .portfolioLogoSection {
+  padding-top: 165px;
+  min-height: 100vh;
 }
 
-.portfolioHero::before {
-  content: "";
-  position: absolute;
-  right: -90px;
-  top: 150px;
-  width: 330px;
-  height: 330px;
-  border: 1px solid rgba(215, 170, 99, 0.14);
-  border-radius: 50%;
-}
-
-.portfolioHero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 170px;
-  height: 170px;
-  opacity: 0.32;
-  background-image: radial-gradient(var(--gold) 1px, transparent 1px);
-  background-size: 8px 8px;
-}
-
-.centerTag {
-  justify-content: center;
-}
-
-.centerTag::after {
-  content: "";
-  width: 52px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.portfolioHero h1 {
+.portfolioLogoSection h2 {
   font-family: "Cinzel", serif;
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(38px, 5vw, 68px);
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 34px;
 }
 
-.portfolioHero h1 em {
+.portfolioLogoSection h2 em {
   color: var(--gold);
   font-style: italic;
-}
-
-.portfolioDivider {
-  width: 250px;
-  height: 1px;
-  background: rgba(215, 170, 99, 0.25);
-  margin: 0 auto 55px;
-  position: relative;
-}
-
-.portfolioDivider span {
-  position: absolute;
-  left: 50%;
-  top: -2px;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--gold);
 }
 
 .logoGrid {
@@ -779,10 +727,10 @@ a {
 }
 
 .logoBox {
-  height: 185px;
+  height: 170px;
   display: grid;
   place-items: center;
-  padding: 34px;
+  padding: 32px;
   border-right: 1px solid rgba(215, 170, 99, 0.22);
   border-bottom: 1px solid rgba(215, 170, 99, 0.22);
   background: rgba(255, 255, 255, 0.012);
@@ -798,6 +746,60 @@ a {
   max-height: 105px;
   object-fit: contain;
   display: block;
+  filter: none;
+}
+
+.portfolioViewBtn {
+  margin-top: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 36px;
+  border: 1px solid rgba(215, 170, 99, 0.45);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.portfolioViewBtn:hover {
+  background: rgba(215, 170, 99, 0.1);
+}
+
+@media (max-width: 1100px) {
+  .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logoBox {
+    height: 155px;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolioLogoSection {
+    padding: 70px 5%;
+  }
+
+  .portfolioPage .portfolioLogoSection {
+    padding-top: 130px;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logoBox {
+    height: 135px;
+    padding: 22px;
+  }
+
+  .logoBox img {
+    max-width: 130px;
+    max-height: 80px;
+  }
 }
 
 /* do not force logo colors */
